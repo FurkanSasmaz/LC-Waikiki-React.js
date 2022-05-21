@@ -1,0 +1,114 @@
+<html>
+<head>
+	<style>
+		.baslik{
+            margin-bottom: 10px;
+            text-align:center;
+            width: 210px;
+            border: solid black 2px;
+		}
+
+		.giris-button{
+            background-color:gray;
+            color: black;
+            border: solid black 2px;
+            width:100%;
+		}
+
+		#sonuc{
+            background-color:white;
+            border: solid black 2px;
+            width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="baslik">Hesap Makinesi</div>
+	<table border="1">
+		<tr>
+			<td colspan="3">
+                <input type="text" id="sonuc">
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="C" onclick="temizle()"> 
+            </td>
+		</tr>
+		<tr>
+			<td>
+                <input type="button" class="giris-button" value="1" onclick="goruntule('1')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="2" onclick="goruntule('2')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="3" onclick="goruntule('3')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="/" onclick="goruntule('/')"> 
+            </td>
+		</tr>
+		<tr>
+			<td>
+                <input type="button" class="giris-button" value="4" onclick="goruntule('4')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="5" onclick="goruntule('5')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="6" onclick="goruntule('6')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="-" onclick="goruntule('-')"> 
+            </td>
+		</tr>
+		<tr>
+			<td>
+                <input type="button" class="giris-button" value="7" onclick="goruntule('7')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="8" onclick="goruntule('8')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="9" onclick="goruntule('9')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="+" onclick="goruntule('+')"> 
+            </td>
+		</tr>
+		<tr>
+			<td>
+                <input type="button" class="giris-button" value="." onclick="goruntule('.')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="0" onclick="goruntule('0')"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="=" onclick="hesapla()"> 
+            </td>
+			<td>
+                <input type="button" class="giris-button" value="*" onclick="goruntule('*')"> 
+            </td>
+		</tr>
+	</table>
+
+    <script>
+        const sonucButton = document.getElementById("sonuc");
+
+		function goruntule(val)
+		{
+			sonucButton.value+=val;
+		}
+		
+		function hesapla()
+		{
+			
+			sonucButton.value = eval(sonucButton.value);
+		}
+		
+		function temizle()
+		{
+			sonucButton.value = "";
+		}
+	</script>
+</body>
+</html>
