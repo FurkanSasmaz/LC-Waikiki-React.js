@@ -1,0 +1,11 @@
+.card{
+    width:40vh;
+    height:55vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 20px;
+}
