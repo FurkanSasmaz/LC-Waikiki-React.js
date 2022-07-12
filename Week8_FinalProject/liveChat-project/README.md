@@ -1,11 +1,10 @@
-#------------------------------
 #
 #
 ##  Link of YouTube Video:
 ##  https://youtu.be/fnBBpkQztz8
 #
 #
-#------------------------------
+
 
 
 # Getting Started with Create React App
